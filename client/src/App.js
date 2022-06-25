@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Card from "./components/card/Card";
+import HomePage from "./pages/HomePage/HomePage";
+import PostCard from "./components/PostCard/PostCard";
 
 function App() {
   return (
@@ -25,7 +27,13 @@ function App() {
         </div>
       </div>
 
-      <div className="postcard">login post explore</div>
+      <Routes>
+        <Route path="/" element={<PostCard />} />
+      </Routes>
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </BrowserRouter>
   );
 }
