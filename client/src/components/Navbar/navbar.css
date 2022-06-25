@@ -62,8 +62,7 @@
 
 @media (max-width:600px) {
     .navContainer {
-        padding: 20px;
-        height: 50px;
+        height: 70px;
     }
 
     .navContainer label {
@@ -72,7 +71,7 @@
 
     .navContainer .navbar {
         position: fixed;
-        top: 90px;
+        top: 70px;
         left: -100%;
         text-align: center;
         background: white;

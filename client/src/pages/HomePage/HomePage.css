@@ -16,6 +16,20 @@
     filter: brightness(50%);
 }
 
-.otherCards {
-    height: 500px;
+.featuredPosts {
+    margin-bottom: 30px;
+}
+
+.actionCards {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }

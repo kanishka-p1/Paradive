@@ -1,11 +1,13 @@
 .footerContainer {
     width: 100%;
-    height: 300px;
+    height: fit-content;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     flex-flow: wrap;
     padding-top: 40px;
+    background-color: #ebf8f7;
+    margin-top: 50px;
 }
 
 .footerColumn {
@@ -41,6 +43,10 @@
     align-items: center;
 }
 
+.last h2 {
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width: 620px) {
     .footerColumn {
         width: 80%;
@@ -50,7 +56,5 @@
         /* text-align: center; */
     }
 
-    .footerContainer {
-        margin-bottom: 50px;
-    }
+
 }

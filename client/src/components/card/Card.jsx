@@ -1,15 +1,18 @@
 import React from "react";
 import "./card.css";
 
-function Card({ title, imageUrl }) {
+function Card(props) {
+  console.log(props.src)
   return (
-    <div className="card-container">
-      <div className="image-container">
-        <img src={imageUrl} alt="" />
+    <div class="actionCard">
+      <div className="actionElement">
+        <div className="actionDetails">
+          <img src={props.src} alt="" />
+          <p>{props.para}</p>
+          <button>{props.button}</button>
+        </div>
       </div>
-      <div className="card-title">
-        <h3>{title}</h3>
-      </div>
+
     </div>
   );
 }
