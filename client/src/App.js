@@ -1,7 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Card from "./components/card/Card";
 import HomePage from "./pages/HomePage/HomePage";
-import PostCard from "./components/PostCard/PostCard";
 
 function App() {
   return (
