@@ -1,0 +1,21 @@
+.searchBackground #surfer {
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    filter: brightness(50%);
+}
+
+.featuredActivities {
+    height: 500px;
+}
+
+.postBackground #canoeing {
+    background-size: cover;
+    height: 800px;
+    width: 100%;
+    filter: brightness(50%);
+}
+
+.otherCards {
+    height: 500px;
+}
