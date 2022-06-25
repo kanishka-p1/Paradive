@@ -1,8 +1,17 @@
 import React from "react";
-import "./activityCard.css";
+import "./activitycard.css";
 
-function ActivityCard() {
-  return <div>ActivityCard</div>;
+function Card({ title, imageUrl }) {
+  return (
+    <div className="card-container">
+      <div className="image-container">
+        <img src={imageUrl} alt="" />
+      </div>
+      <div className="card-title">
+        <h3>{title}</h3>
+      </div>
+    </div>
+  );
 }
 
-export default ActivityCard;
+export default Card;

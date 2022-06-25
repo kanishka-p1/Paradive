@@ -1,62 +1,22 @@
 import React from "react";
-import "./postcard.css";
+import "./PostCard.css";
 
-function PostCard() {
+function ActivityCard() {
   return (
-    <div className="container">
-      <div className="card-container">
-        <div className="login">
-          <div className="img-container">
-            <img
-              id="login-image"
-              src={process.env.PUBLIC_URL + "/Assets/login-image.jpg"}
-              alt=""
-            />
-          </div>
-          <div className="body-text">
-            <p>Excited? Join our Community to have more fun!</p>
-          </div>
-          <div className="btn">
-            <button>Login</button>
-          </div>
-        </div>
-      </div>
-      <div className="card-container">
-        <div className="post">
-          <div className="img-container">
-            <img
-              id="post-image"
-              src={process.env.PUBLIC_URL + "/Assets/post-image.png"}
-              alt=""
-            />
-          </div>
-          <div className="body-text">
-            <p>Show the world your excursions Create a post</p>
-          </div>
-          <div className="btn">
-            <button>Post</button>
-          </div>
-        </div>
-      </div>
-      <div className="card-container">
-        <div className="explore">
-          <div className="img-container">
-            <img
-              id="explore-image"
-              src={process.env.PUBLIC_URL + "/Assets/explore-image.png"}
-              alt=""
-            />
-          </div>
-          <div className="body-text">
-            <p>Want to have a look at what all you can do this summer?</p>
-          </div>
-          <div className="btn">
-            <button>Explore</button>
-          </div>
+    <div class="container">
+      <div class="card">
+        <div class="content">
+          <h2>01</h2>
+          <h3>Card One</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <a href="#">Read More</a>
         </div>
       </div>
     </div>
   );
 }
 
-export default PostCard;
+export default ActivityCard;
