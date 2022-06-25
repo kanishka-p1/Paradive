@@ -5,9 +5,9 @@
     justify-content: space-around;
     align-items: flex-start;
     flex-flow: wrap;
-    padding-top: 40px;
     background-color: #ebf8f7;
     margin-top: 50px;
+    padding-bottom: 30px;
 }
 
 .footerColumn {
@@ -40,7 +40,12 @@
     font-size: 1rem;
     font-weight: lighter;
     display: flex;
+    margin: 10px;
     align-items: center;
+}
+
+.others {
+    margin-top: 20px;
 }
 
 .last h2 {
@@ -52,9 +57,10 @@
         width: 80%;
         height: fit-content;
         font-size: 1.2rem;
-        margin-bottom: 30px;
-        /* text-align: center; */
     }
 
+    .others {
+        margin-top: 20px;
+    }
 
 }

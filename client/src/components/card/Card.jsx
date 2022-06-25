@@ -17,4 +17,4 @@ function Card(props) {
   );
 }
 
-export default PostCard;
+export default Card;
