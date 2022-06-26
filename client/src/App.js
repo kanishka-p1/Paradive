@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import AllActivity from "./pages/AllActivity/AllActivity";
 import Login from "./pages/Login/Login"
-// import Register from "./pages/Register/Register"
+import Register from "./pages/Register/Register"
 import Post from "./pages/post/Post";
 
 
@@ -16,7 +16,7 @@ function App() {
         {/* use login page here */}
         <Route path="/login" element={<Login />} />
         {/* use sign in page here */}
-        <Route path="/register" element={<AllActivity />} />
+        <Route path="/register" element={<Register />} />
         <Route path="/posts/:id" element={<Post />} />
       </Routes>
     </BrowserRouter>
