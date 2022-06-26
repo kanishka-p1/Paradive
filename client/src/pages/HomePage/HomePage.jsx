@@ -5,6 +5,10 @@ import Card from '../../components/card/Card'
 import ActivityCard from '../../components/ActivityCard/ActivityCard'
 import PostCard from '../../components/PostCard/PostCard'
 import { actions, activities } from "./content"
+import {
+    faMagnifyingGlass
+} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./HomePage.css"
 
 function HomePage() {
@@ -14,8 +18,15 @@ function HomePage() {
             <div className='landing'>
                 <div className="search">
                     <div className="searchBackground">
-                        <img id="surfer" src={process.env.PUBLIC_URL + "/Assets/landingHero.jpg"} alt="" />
+                        <img id="surfer" src={process.env.PUBLIC_URL + "/Assets/canoeing.jpg"} alt="" />
                         {/* <img id="overlaybottom" src={process.env.PUBLIC_URL + "/Assets/overlaybottom.png"} alt="" /> */}
+                    </div>
+                    <div className='searchBar'>
+                        <h2>Explore</h2>
+                        <div className="searchInput">
+                            <input type="text" placeholder='Search Activities' />
+                            <FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />
+                        </div>
                     </div>
                 </div>
                 <div className="featuredActivities">
