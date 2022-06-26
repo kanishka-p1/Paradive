@@ -10,7 +10,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
   flex-wrap: wrap;
   background: url("../../../public/Assets/canoeing.jpg");
   width: 100vw;
