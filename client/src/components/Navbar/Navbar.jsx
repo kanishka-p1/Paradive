@@ -7,7 +7,6 @@ import { Link } from "react-router-dom"
 const Navbar = () => {
     const [navbar, setNavbar] = useState(false);
     const changeBackground = () => {
-        console.log(window.scrollY)
         if (window.scrollY >= 80) {
             setNavbar(true)
         } else {
@@ -28,7 +27,7 @@ const Navbar = () => {
             <nav className='navbar'>
                 <ul>
                     <Link to="/activities">
-                        <li><a>Activites </a></li>
+                        <li><a>Activities </a></li>
                     </Link>
                     <Link to="/">
                         <li><a>New Post</a></li>
