@@ -32,6 +32,8 @@ function Post() {
                             <p><FontAwesomeIcon className="icon" icon={faCalendar} /><span> Visited On : </span>20-50</p>
                             <p><FontAwesomeIcon className="icon" icon={faPersonSwimming} /><span> Posted By : </span>20-50</p>
                             <p><FontAwesomeIcon className="icon" icon={faLocationDot} /><span> Location : </span>20-50</p>
+                            <button>Edit</button>
+                            <button>Delete</button>
                         </div>
                     </div>
 
