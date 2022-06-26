@@ -7,7 +7,7 @@ export const actions = [
     },
     {
         src: "/Assets/post.png",
-        para: "Show the world your excursions Create a post",
+        para: "Show the world your excursions, create a post",
         button: "Post"
     },
     {
@@ -15,4 +15,19 @@ export const actions = [
         para: "Want to have a look at what all you can do this summer?",
         button: "Explore"
     },
+]
+
+export const activities = [
+    {
+        src: "/Assets/act1.png",
+        name: "Rafting"
+    },
+    {
+        src: "/Assets/act2.png",
+        name: "Banana Boating"
+    },
+    {
+        src: "/Assets/act3.png",
+        name: "Hang Gliding"
+    }
 ]

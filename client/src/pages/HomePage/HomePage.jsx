@@ -2,7 +2,9 @@ import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import Card from '../../components/card/Card'
-import { actions } from "./content"
+import ActivityCard from '../../components/ActivityCard/ActivityCard'
+import PostCard from '../../components/PostCard/PostCard'
+import { actions, activities } from "./content"
 import "./HomePage.css"
 
 function HomePage() {
@@ -17,11 +19,25 @@ function HomePage() {
                     </div>
                 </div>
                 <div className="featuredActivities">
-
+                    <div className="activities">
+                        <ActivityCard
+                            src={activities[0].src}
+                            name={activities[0].name}
+                        />
+                        <ActivityCard
+                            src={activities[1].src}
+                            name={activities[1].name}
+                        />
+                        <ActivityCard
+                            src={activities[2].src}
+                            name={activities[2].name}
+                        />
+                    </div>
                 </div>
                 <div className="featuredPosts">
                     <div className="postBackground">
-                        <img id="canoeing" src={process.env.PUBLIC_URL + "/Assets/canoeing.jpg"} alt="" />
+                        {/* <img id="canoeing" src={process.env.PUBLIC_URL + "/Assets/canoeing.jpg"} alt="" /> */}
+                        <PostCard />
                     </div>
                 </div>
                 <div className="actionCards">

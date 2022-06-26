@@ -21,7 +21,8 @@
 
 .actionDetails p {
     font-size: 1rem;
-    padding: 5px 5px;
+    height: 40px;
+    padding: 15px 10px;
     color: #99a8b2;
 }
 
@@ -39,6 +40,7 @@
     background-color: #51c4d3;
     border: none;
     color: white;
+    margin-top: 10px;
     padding: 10px 25px;
     font-size: 1.1rem;
     font-weight: 600;
@@ -66,4 +68,11 @@
         padding: 5px 5px;
     }
 
+    .actionDetails button {
+        margin-top: 0;
+    }
+
+    .actionDetails p {
+        height: 40px;
+    }
 }

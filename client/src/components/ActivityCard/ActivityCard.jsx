@@ -1,16 +1,20 @@
 import React from "react";
-import "./activitycard.css";
+import "./activityCard.css";
 
-function Card({ title, imageUrl }) {
+function Card(props) {
   return (
-    <div className="card-container">
-      <div className="image-container">
-        <img src={imageUrl} alt="" />
+    <div className="activityCardContainer">
+      <div className="card-container">
+        <div className="image-container">
+          <img src={props.src} alt="" />
+        </div>
+
       </div>
       <div className="card-title">
-        <h3>{title}</h3>
+        <h3>{props.name}</h3>
       </div>
     </div>
+
   );
 }
 
