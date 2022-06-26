@@ -11,17 +11,18 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  background: url("../../../public/Assets/canoeing.jpg");
-  width: 100vw;
+  background: url("../../../public/Assets/postbg.png");
+  background-size: cover;
+  height: 800px;
 }
 
 .container .card {
   position: relative;
-  width: 280px;
+  width: 300px;
   height: 500px;
   margin: 20px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
+  /* border-radius: 15px; */
   background: rgba(255, 255, 255, 0.1);
   overflow: hidden;
   display: flex;
@@ -47,30 +48,52 @@
   height: 200px;
   width: 280;
   overflow: hidden;
+  padding: 10px;
 }
 
 .container .card .content h4 {
+  padding: 10px 0;
   font-size: 1.5em;
-  color: black;
+  color: white;
   z-index: 1;
 }
 
-.container .card .content p {
+.container .card .content h6 {
   font-size: 0.8em;
-  color: black;
+  color: #d8e3e7;
   font-weight: 300;
+  padding: 5px 0;
+}
+
+.container .card .content h6 span {
+  color: #51c4d3;
+  font-weight: 600;
+}
+
+.container .card .content p {
+  margin: 0 5px;
+  padding: 5px 5px;
+  color: #d8e3e7;
+  background-color: rgba(255, 255, 255, 0.174);
+
 }
 
 .container .card .content button {
   position: relative;
   display: inline-block;
   padding: 8px 20px;
-  margin-bottom: 5px;
-  background: black;
-  color: white;
+  margin: 20px 0;
+  background: white;
+  color: black;
   border-radius: 20px;
   text-decoration: none;
   font-weight: 500;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.container .card .content button:hover {
+  transform: translateY(-2px);
+  background-color: rgb(233, 246, 254);
 }
