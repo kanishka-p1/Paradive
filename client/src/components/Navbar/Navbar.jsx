@@ -29,7 +29,7 @@ const Navbar = () => {
                     <Link to="/activities">
                         <li><a>Activities </a></li>
                     </Link>
-                    <Link to="/">
+                    <Link to="/new">
                         <li><a>New Post</a></li>
                     </Link>
                     <Link to="/register">

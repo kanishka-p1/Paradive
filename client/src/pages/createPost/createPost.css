@@ -1,0 +1,70 @@
+.createPostContainer {
+    background: url("../../../public/Assets/createbg.png");
+    background-size: cover;
+    background-repeat: repeat;
+    height: 900px;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+form {
+    margin: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.picsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 40px;
+}
+
+.picsContainer #upload {
+    margin: 30px 0;
+}
+
+.uploadedPictures {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.columns {
+    display: flex;
+    gap: 10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#lastInput {
+    align-self: flex-start;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}

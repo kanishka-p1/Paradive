@@ -5,7 +5,7 @@ import Activity from "./pages/Activity/Activity";
 import Login from "./pages/Login/Login"
 import Register from "./pages/Register/Register"
 import Post from "./pages/post/Post";
-
+import CreatePost from "./pages/createPost/CreatePost";
 
 function App() {
   return (
@@ -34,7 +34,7 @@ function App() {
           <Route path="register" element={<Register />} />
 
           {/* route for new post */}
-          {/* <Route path="new" element={<CreatePost />} /> */}
+          <Route path="new" element={<CreatePost />} />
 
           {/* route for activities */}
           <Route path="activities" >
