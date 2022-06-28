@@ -24,7 +24,7 @@ function HomePage() {
             {/* <img id="overlaybottom" src={process.env.PUBLIC_URL + "/Assets/overlaybottom.png"} alt="" /> */}
           </div>
           <div className="searchBar">
-            <h2>Explore🧐</h2>
+            <h2>Explore</h2>
             <div className="searchInput">
               <input type="text" placeholder="Search Activities" />
               <FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />
