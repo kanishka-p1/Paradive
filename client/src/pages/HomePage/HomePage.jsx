@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Footer from '../../components/Footer/Footer'
 import Card from '../../components/card/Card'
-import ActivityCard from '../../components/ActivityCard/ActivityCard'
+import ActivityCard from '../../components/Activitycard/ActivityCard'
 import PostCard from '../../components/PostCard/PostCard'
 import { actions, activities } from "./content"
 import {
