@@ -1,4 +1,3 @@
-import User from "../models/User.js";
 import Post from "../models/Post.js";
 
 export const createPost = async (req, res, next) => {
@@ -7,7 +6,7 @@ export const createPost = async (req, res, next) => {
     const savedPost = await newPost.save();
     res.status(200).json(savedPost);
   } catch (err) {
-    next(err);
+    next(err)
   }
 };
 
@@ -42,10 +41,17 @@ export const getPost = async (req, res, next) => {
   }
 };
 
+// /getposts?type=jetskiing,canoeing,paragliding
+
 export const getPosts = async (req, res, next) => {
   try {
-    const posts = await Post.find();
-    res.status(200).json(posts);
+    const list = await Promise.all(
+      types.map((type) => {
+        const t = Post.findOne({ type: type })
+        return t;
+      })
+    )
+    res.status(200).json(list);
   } catch (err) {
     next(err);
   }

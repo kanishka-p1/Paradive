@@ -7,7 +7,7 @@ import {
   updatePost,
 } from "../controller/posts.js";
 import Post from "../models/Post.js";
-import {verifyAdmin, verifyUser} from "../utils/verifyToken.js"
+import { verifyAdmin, verifyUser } from "../utils/verifyToken.js"
 
 
 const router = express.Router();
@@ -15,7 +15,7 @@ const router = express.Router();
 router.post("/", verifyUser, createPost);
 router.put("/:id", verifyUser, updatePost);
 router.delete("/:id", verifyUser, deletePost);
-router.get("/:id", getPost);
-router.get("/", getPosts);
+router.get("/find/:id", getPost);
+router.get("/getPosts", getPosts);
 
 export default router;

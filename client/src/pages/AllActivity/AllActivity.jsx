@@ -2,7 +2,7 @@ import React from "react";
 import "./allActivity.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
-import ActivityCard from "../../components/Activitycard/ActivityCard";
+import ActivityCard from "../../components/ActivityCard/ActivityCard";
 import { activities } from "./content";
 function AllActivity() {
   return (

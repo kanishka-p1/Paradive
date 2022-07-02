@@ -2,14 +2,18 @@ import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import Card from "../../components/card/Card";
-import ActivityCard from "../../components/Activitycard/ActivityCard";
+import ActivityCard from "../../components/ActivityCard/ActivityCard";
 import PostCard from "../../components/PostCard/PostCard";
 import { actions, activities } from "./content";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import "./HomePage.css";
+import useFetch from "../../Hooks/useFetch";
 
 function HomePage() {
+  const { data, loading, error, reFetch } = useFetch("/posts/getPosts?type=jetskiing,paragliding,canoeing")
+  console.log(data)
   return (
     <div className="HomePage">
       <Navbar />
