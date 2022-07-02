@@ -12,8 +12,10 @@ import "./HomePage.css";
 import useFetch from "../../Hooks/useFetch";
 
 function HomePage() {
-  const { data, loading, error, reFetch } = useFetch("/posts/getPosts?type=jetskiing,paragliding,canoeing")
-  console.log(data)
+  const { data, loading, error, reFetch } = useFetch(
+    "/posts/getPosts?type=jetskiing,paragliding,canoeing"
+  );
+  console.log(data);
   return (
     <div className="HomePage">
       <Navbar />
@@ -45,7 +47,27 @@ function HomePage() {
         <div className="featuredPosts">
           <div className="postBackground">
             {/* <img id="canoeing" src={process.env.PUBLIC_URL + "/Assets/canoeing.jpg"} alt="" /> */}
-            <PostCard />
+            <PostCard
+              src={data[0].img[0]}
+              title={data[0].title}
+              username={data[0].username}
+              date={data[0].date}
+              desc={data[0].desc}
+            />
+            <PostCard
+              src={data[1].img[0]}
+              title={data[1].title}
+              username={data[1].username}
+              date={data[1].date}
+              desc={data[1].desc}
+            />
+            <PostCard
+              src={data[2].img[0]}
+              title={data[2].title}
+              username={data[2].username}
+              date={data[2].date}
+              desc={data[2].desc}
+            />
           </div>
         </div>
         <div className="actionCards">
