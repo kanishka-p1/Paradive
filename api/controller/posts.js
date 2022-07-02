@@ -43,5 +43,10 @@ export const getPost = async (req, res, next) => {
 };
 
 export const getPosts = async (req, res, next) => {
-  res.send("timeline");
+  try {
+    const posts = await Post.find();
+    res.status(200).json(posts);
+  } catch (err) {
+    next(err);
+  }
 };
