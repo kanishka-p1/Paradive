@@ -1,50 +1,9 @@
-.search {
-    position: relative;
-}
-
-.searchBackground #surfer {
+.heroBackground #surfer {
+    background-attachment: fixed;
     background-size: cover;
     height: 800px;
     width: 100%;
     filter: brightness(60%);
-}
-
-.searchBar {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.searchBar h2 {
-    color: white;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.searchInput {
-    background-color: white;
-    padding: 5px 10px;
-    border-radius: 50px;
-    width: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-.searchInput input {
-    border: none;
-    height: 40px;
-    width: 70%;
-    padding: 0 10px;
-}
-
-.searchInput input:focus {
-    outline: none;
-}
-
-.searchInput .icon {
-    cursor: pointer;
 }
 
 .featuredActivities {
@@ -80,11 +39,4 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-}
-
-@media screen and (max-width: 700px) {
-    .searchInput {
-        width: 300px;
-    }
-
 }

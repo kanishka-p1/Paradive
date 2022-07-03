@@ -5,33 +5,23 @@ import Card from "../../components/card/Card";
 import ActivityCard from "../../components/ActivityCard/ActivityCard";
 import PostCard from "../../components/PostCard/PostCard";
 import { actions, activities } from "./content";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import "./HomePage.css";
 
 function HomePage() {
-  console.log(activities);
+
+
 
   return (
     <div className="HomePage">
       <Navbar />
       <div className="landing">
-        <div className="search">
-          <div className="searchBackground">
+        <div className="heroimg">
+          <div className="heroBackground">
             <img
               id="surfer"
-              src={process.env.PUBLIC_URL + "/Assets/canoeing.jpg"}
+              src={process.env.PUBLIC_URL + "/Assets/surfer-ocean.jpg"}
               alt=""
             />
-            {/* <img id="overlaybottom" src={process.env.PUBLIC_URL + "/Assets/overlaybottom.png"} alt="" /> */}
-          </div>
-          <div className="searchBar">
-            <h2>Explore</h2>
-            <div className="searchInput">
-              <input type="text" placeholder="Search Activities" />
-              <FontAwesomeIcon className="icon" icon={faMagnifyingGlass} />
-            </div>
           </div>
         </div>
         <div className="featuredActivities">

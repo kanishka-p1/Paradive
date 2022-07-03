@@ -26,8 +26,8 @@ const Navbar = () => {
             <label htmlFor="menu-bar"><FontAwesomeIcon icon={faBars} className="icon" /></label>
             <nav className='navbar'>
                 <ul>
-                    <Link to="/activities">
-                        <li><a>Activities </a></li>
+                    <Link to="/explore">
+                        <li><a>Explore</a></li>
                     </Link>
                     <Link to="/new">
                         <li><a>New Post</a></li>

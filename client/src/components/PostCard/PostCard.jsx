@@ -6,7 +6,7 @@ function ActivityCard() {
   const { data, loading, error, reFetch } = useFetch(
     "/posts"
   );
-  console.log(data)
+  const posts = data.slice(0, 3);
   return (
 
     <div className="container">
@@ -16,7 +16,7 @@ function ActivityCard() {
         <>
 
           {
-            data.map((item, i) => (
+            posts.map((item, i) => (
               <div className="card" key={item._id}>
                 <div class="content">
                   <img id="post-image" src={item.img[0]} alt="" />
