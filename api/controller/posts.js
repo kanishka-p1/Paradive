@@ -44,6 +44,7 @@ export const getPost = async (req, res, next) => {
 // /getposts?type=jetskiing,canoeing,paragliding
 
 export const getPosts = async (req, res, next) => {
+  const types = req.query.type.split(",")
   try {
     const list = await Promise.all(
       types.map((type) => {
