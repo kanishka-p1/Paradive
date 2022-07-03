@@ -15,15 +15,17 @@ function HomePage() {
     <div className="HomePage">
       <Navbar />
       <div className="landing">
-        <div className="heroimg">
-          <div className="heroBackground">
+        <div className="search">
+          <div className="searchBackground">
             <img
               id="surfer"
-              src={process.env.PUBLIC_URL + "/Assets/surfer-ocean.jpg"}
+              src={process.env.PUBLIC_URL + "/Assets/canoeing.jpg"}
               alt=""
             />
           </div>
         </div>
+
+
         <div className="featuredActivities">
           <div className="activities">
             <ActivityCard

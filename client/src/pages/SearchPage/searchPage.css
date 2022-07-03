@@ -105,17 +105,17 @@
 .searchedPosts .card .content h6 {
     font-size: 0.8em;
     color: #d8e3e7;
-    font-weight: 300;
+    font-weight: bold;
     padding: 5px 0;
 }
 
 .searchedPosts .card .content h6 span {
     color: #51c4d3;
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .searchedPosts .card .content p {
-    margin: 0 5px;
+    margin: 0 10px;
     padding: 5px 5px;
     color: #d8e3e7;
     background-color: rgba(255, 255, 255, 0.174);

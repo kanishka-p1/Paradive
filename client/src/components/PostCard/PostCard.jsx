@@ -1,11 +1,13 @@
 import React from "react";
 import useFetch from "../../Hooks/useFetch";
 import "./postcard.css";
+import { Link } from "react-router-dom"
 
 function ActivityCard() {
   const { data, loading, error, reFetch } = useFetch(
     "/posts"
   );
+
   const posts = data.slice(0, 3);
   return (
 
@@ -28,7 +30,9 @@ function ActivityCard() {
                     <span>Date : </span> {item.date}
                   </h6>
                   <p>{item.desc}</p>
-                  <button>Read More</button>
+                  <Link to={`/${item._id}`}>
+                    <button>Read More</button>
+                  </Link>
                 </div>
               </div >
             ))
