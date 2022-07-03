@@ -7,6 +7,7 @@ import userRoute from "./routes/users.js";
 import authRoute from "./routes/auth.js";
 import postRoute from "./routes/posts.js";
 import cookieParser from "cookie-parser";
+import cors from "cors"
 
 const app = express();
 dotenv.config();
@@ -30,6 +31,7 @@ mongoose.connection.on("disconnected", () => {
 app.use(cookieParser())
 app.use(express.json());
 app.use(helmet());
+app.use(cors())
 app.use(morgan("common"));
 
 app.use("/api/auth", authRoute);

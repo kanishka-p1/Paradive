@@ -8,11 +8,18 @@ import {
     faPersonSwimming,
     faLocationDot
 }
-
     from '@fortawesome/free-solid-svg-icons'
+import { useLocation, useNavigate } from "react-router-dom"
+import useFetch from "../../Hooks/useFetch"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Post() {
+    const location = useLocation()
+    const id = location.pathname.split("/")[1];
+    console.log(id)
+    const { data, loading, error } = useFetch(`/posts/${id}`)
+    console.log(data)
+
     return (
         <div className='postPage'>
             <Navbar />
@@ -47,9 +54,9 @@ function Post() {
                 </div>
                 <div className="rightContainer">
                     <div className="map">
-                        <iframe
+                        {/* <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.8149368335253!2d77.23020441424978!3d28.665259382404848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd0683919c3b%3A0xf5fc331b74c2b9e2!2sIndira%20Gandhi%20Delhi%20Technical%20University%20for%20Women!5e0!3m2!1sen!2sin!4v1600941143402!5m2!1sen!2sin"
-                            allowfullscreen title='map'></iframe>
+                            allowfullscreen title='map'></iframe> */}
                     </div>
                     <div className="images">
                         <img src={process.env.PUBLIC_URL + "/Assets/rafting.png"} width="300px" height="250px" alt="" />
