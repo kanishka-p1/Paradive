@@ -43,17 +43,26 @@ export const getPost = async (req, res, next) => {
 
 // /getposts?type=jetskiing,canoeing,paragliding
 
+// export const getPosts = async (req, res, next) => {
+//   const types = req.query.type.split(",")
+//   try {
+//     const list = await Promise.all(
+//       types.map((type) => {
+//         const t = Post.findOne({ type: type });
+//         return t;
+//       })
+//     );
+//     res.status(200).json(list);
+//   } catch (err) {
+//     next(err);
+//   }
+// };
+
 export const getPosts = async (req, res, next) => {
-  const types = req.query.type.split(",")
   try {
-    const list = await Promise.all(
-      types.map((type) => {
-        const t = Post.findOne({ type: type });
-        return t;
-      })
-    );
-    res.status(200).json(list);
+    const posts = await Post.find();
+    res.status(200).json(posts);
   } catch (err) {
-    next(err);
+    next(err)
   }
-};
+}

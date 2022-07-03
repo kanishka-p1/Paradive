@@ -16,6 +16,6 @@ router.post("/", verifyUser, createPost);
 router.put("/:id", verifyUser, updatePost);
 router.delete("/:id", verifyUser, deletePost);
 router.get("/find/:id", getPost);
-router.get("/getPosts", getPosts);
+router.get("/", getPosts);
 
 export default router;
