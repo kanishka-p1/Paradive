@@ -5,11 +5,10 @@ import "./activityCard.css";
 function Card(props) {
   return (
     <div className="activityCardContainer">
-      <div className="card-container">
+      <div className="card-container" key={props.key}>
         <div className="image-container">
           <img src={props.src} alt="" />
         </div>
-
       </div>
       <Link to={`/activities/${props.name}`}>
         <div className="card-title">
@@ -17,7 +16,6 @@ function Card(props) {
         </div>
       </Link>
     </div>
-
   );
 }
 
