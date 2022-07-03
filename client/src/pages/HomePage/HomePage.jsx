@@ -15,17 +15,22 @@ function HomePage() {
     <div className="HomePage">
       <Navbar />
       <div className="landing">
-        <div className="search">
-          <div className="searchBackground">
+        <div className="hero">
+          <div className="heroBackground">
             <img
-              id="surfer"
               src={process.env.PUBLIC_URL + "/Assets/canoeing.jpg"}
               alt=""
             />
           </div>
+          <div className="heroContent">
+            <img src={process.env.PUBLIC_URL + "/Assets/hero.png"} alt="" />
+            <p>Bored this summer? Want to go out? Don't know where to go? What to do?
+              Paradive has you covered. We are a community that allows everyone to share
+              their experiences!
+              You can view what others have been upto this summer and draw inspiration as well as share your own experiences...
+            </p>
+          </div>
         </div>
-
-
         <div className="featuredActivities">
           <div className="activities">
             <ActivityCard
