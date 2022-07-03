@@ -12,8 +12,8 @@ import "./HomePage.css";
 import useFetch from "../../Hooks/useFetch";
 
 function HomePage() {
-  const { data, loading, error, reFetch } = useFetch("/posts/getPosts?type=jetskiing,paragliding,canoeing")
-  console.log(data)
+  console.log(activities);
+
   return (
     <div className="HomePage">
       <Navbar />
@@ -37,14 +37,52 @@ function HomePage() {
         </div>
         <div className="featuredActivities">
           <div className="activities">
-            <ActivityCard src={activities[0].src} name={activities[0].name} />
-            <ActivityCard src={activities[1].src} name={activities[1].name} />
-            <ActivityCard src={activities[2].src} name={activities[2].name} />
+            {/* <ActivityCard
+              key={activities[0].id}
+              src={activities[0].src}
+              name={activities[0].name}
+            />
+            <ActivityCard
+              key={activities[1].id}
+              src={activities[1].src}
+              name={activities[1].name}
+            />
+            <ActivityCard
+              key={activities[2].id}
+              src={activities[2].src}
+              name={activities[2].name}
+            /> */}
           </div>
         </div>
         <div className="featuredPosts">
           <div className="postBackground">
             {/* <img id="canoeing" src={process.env.PUBLIC_URL + "/Assets/canoeing.jpg"} alt="" /> */}
+            {/* <PostCard
+              key={data[0]._id}
+              src={data[0].img[0]}
+              title={data[0].title}
+              username={data[0].username}
+              date={data[0].date}
+              desc={data[0].desc}
+            />
+            <PostCard
+              key={data[1]._id}
+              src={data[1].img[0]}
+              title={data[1].title}
+              username={data[1].username}
+              date={data[1].date}
+              desc={data[1].desc}
+            />
+            <PostCard
+              key={data[2]._id}
+              src={data[2].img[0]}
+              title={data[2].title}
+              username={data[2].username}
+              date={data[2].date}
+              desc={data[2].desc}
+            /> */}
+            <PostCard />
+            <PostCard />
             <PostCard />
           </div>
         </div>

@@ -1,48 +1,46 @@
 import React from "react";
+import useFetch from "../../Hooks/useFetch";
 import "./postcard.css";
 
 function ActivityCard() {
+  const { data, loading, error, reFetch } = useFetch(
+    "/posts/getPosts?type=jetskiing,paragliding,canoeing"
+  );
+  console.log(data);
   return (
-    <div class="container">
-      <div class="card">
-        <div class="content">
-          <img id="post-image" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/09/e6/b6/59.jpg" alt="" />
-          <h4>Jet Skiing is Fun!</h4>
-          <h6><span>Posted By : </span> Michael Jordan</h6>
-          <h6><span>Date : </span>7th May 2022</h6>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+    <div class="card">
+      {loading ? (
+        "loading"
+      ) : (
+        <>
+          {data.map((i) => (
+            <div class="content" key={i}>
+              <img id="post-image" src={data[i].img[0]} alt="" />
+              <h4>{data[i].title}</h4>
+              <h6>
+                <span>Posted By : </span> {data[i].username}
+              </h6>
+              <h6>
+                <span>Date : </span> {data[i].date}
+              </h6>
+              <p>{data[i].desc}</p>
+              <button>Read More</button>
+            </div>
+          ))}
+        </>
+      )}
+      {/* <div class="content">
+          <img id="post-image" src= alt="" />
+          <h4></h4>
+          <h6>
+            <span>Posted By : </span> 
+          </h6>
+          <h6>
+            <span>Date : </span> 
+          </h6>
+          <p></p>
           <button>Read More</button>
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <img id="post-image" src="https://cdn.britannica.com/69/155969-050-CF4B71FA/kayaker-ocean-waves.jpg" alt="" />
-          <h4>Canoeing 1st Time!</h4>
-          <h6><span>Posted By : </span> Josh Grad</h6>
-          <h6><span>Date : </span> 21st June 2022</h6>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <button>Read More</button>
-        </div>
-      </div>
-      <div class="card">
-        <div class="content">
-          <img id="post-image" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/ed/6c/3a.jpg" alt="" />
-          <h4>Jeez that was Scary</h4>
-          <h6><span>Posted By : </span> Sasha Green</h6>
-          <h6><span>Date : </span> 15th June 2022</h6>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
-          <button>Read More</button>
-        </div>
-      </div>
+        </div> */}
     </div>
   );
 }
