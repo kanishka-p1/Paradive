@@ -23,6 +23,7 @@ function SearchPage() {
       (item) => keys.some(key => item[key].toLowerCase().includes(query))
     )
   }
+  // console.log(data)
 
   return (
     <div className="searchContainer">

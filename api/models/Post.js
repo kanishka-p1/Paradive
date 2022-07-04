@@ -16,7 +16,6 @@ const PostSchema = new mongoose.Schema(
     },
     priceRange: {
       type: String,
-      required: true,
     },
     location: {
       type: String,

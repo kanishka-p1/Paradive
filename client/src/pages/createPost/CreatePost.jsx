@@ -6,6 +6,7 @@ import { faPlusCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import { AuthContext } from "../../context/authContext";
+import { useNavigate } from "react-router-dom";
 
 function CreatePost() {
   const [files, setFiles] = useState("");
@@ -13,6 +14,7 @@ function CreatePost() {
   const [rating, setRating] = useState(0);
   const { user, dispatch } = useContext(AuthContext);
   console.log(user);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
@@ -45,6 +47,7 @@ function CreatePost() {
       };
 
       await axios.post("http://localhost:7700/api/posts", newpost);
+      navigate(`/${info._id}`);
     } catch (err) {
       console.log(err);
     }
