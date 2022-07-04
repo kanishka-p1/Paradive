@@ -21,7 +21,7 @@ function ActivityCard() {
             posts.map((item, i) => (
               <div className="card" key={item._id}>
                 <div class="content">
-                  <img id="post-image" src={item.img[0]} alt="" />
+                  <img id="post-image" src={item.photos[0]} alt="" />
                   <h4>{item.title}</h4>
                   <h6>
                     <span>Posted By : </span> {item.username}

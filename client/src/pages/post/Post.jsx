@@ -10,15 +10,19 @@ import {
 }
     from '@fortawesome/free-solid-svg-icons'
 import { useLocation, useNavigate } from "react-router-dom"
-import useFetch from "../../Hooks/useFetch"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState, useEffect } from 'react'
+import axios from "axios"
+import useFetch from '../../Hooks/useFetch'
 
 function Post() {
+
     const location = useLocation()
     const id = location.pathname.split("/")[1];
-    console.log(id)
-    const { data, loading, error } = useFetch(`/posts/${id}`)
+    const { data, loading } = useFetch(`/posts/${id}`)
     console.log(data)
+    const images = data.photos;
+    console.log(images)
 
     return (
         <div className='postPage'>
@@ -27,30 +31,29 @@ function Post() {
                 <div className="leftContainer">
                     <div className='postContent'>
                         <div className="upperContent">
-                            <h1>River Rafting with my Friends</h1>
+                            <h1>{data.title}</h1>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In tempora quibusdam dolore amet, ipsam dolores, quae corrupti doloremque pariatur animi numquam modi praesentium.
-                            Ut rem architecto possimus nihil pariatur sint!</p>
+                        <p>{data.desc}</p>
 
 
                         <div className="lowerContent">
-                            <div className="title"><span>Activity: Type</span>Rafting</div>
-                            <p><FontAwesomeIcon className="icon" icon={faDollarSign} /><span> Price Range : </span>20-50</p>
-                            <p><FontAwesomeIcon className="icon" icon={faCalendar} /><span> Visited On : </span>20-50</p>
-                            <p><FontAwesomeIcon className="icon" icon={faPersonSwimming} /><span> Posted By : </span>20-50</p>
-                            <p><FontAwesomeIcon className="icon" icon={faLocationDot} /><span> Location : </span>20-50</p>
+                            <div className="title"><span>Activity: Type</span>{data.type}</div>
+                            <p><FontAwesomeIcon className="icon" icon={faDollarSign} /><span> Price Range : </span>{data.priceRange}</p>
+                            <p><FontAwesomeIcon className="icon" icon={faCalendar} /><span> Visited On : </span>{data.date}</p>
+                            <p><FontAwesomeIcon className="icon" icon={faPersonSwimming} /><span> Posted By : </span>{data.username}</p>
+                            <p><FontAwesomeIcon className="icon" icon={faLocationDot} /><span> Location : </span>{data.location}</p>
                             <button>Edit</button>
                             <button>Delete</button>
                         </div>
                     </div>
 
-                    <div className="comments">
+                    {/* <div className="comments">
                         <div className="title"><span>Comment(s): </span>5</div>
                         <div className="comment">
                             <h2 className='CommentAuth'>Natasha Sloan</h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eius labore facilis aspernatur tempore, reiciendis, iste sunt aliquid, esse harum molestiae accusamus aliquam minima? Tenetur quae ipsa eum incidunt nobis.</p>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="rightContainer">
                     <div className="map">
@@ -59,7 +62,16 @@ function Post() {
                             allowfullscreen title='map'></iframe> */}
                     </div>
                     <div className="images">
-                        <img src={process.env.PUBLIC_URL + "/Assets/rafting.png"} width="300px" height="250px" alt="" />
+                        {loading ? (
+                            "loading"
+                        ) : (
+                            <>
+
+
+                                {images.map((image, i) => (
+                                    <img key={i} src={image} width="300px" height="250px" alt="" />
+                                ))}
+                            </>)}
                     </div>
                 </div>
             </div>
