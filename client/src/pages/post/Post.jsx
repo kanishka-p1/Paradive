@@ -11,8 +11,7 @@ import {
     from '@fortawesome/free-solid-svg-icons'
 import { useLocation, useNavigate } from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState, useEffect } from 'react'
-import axios from "axios"
+
 import useFetch from '../../Hooks/useFetch'
 
 function Post() {
@@ -62,7 +61,9 @@ function Post() {
                             allowfullscreen title='map'></iframe> */}
                     </div>
                     <div className="images">
-                        {loading ? (
+
+                        <img src={data.photos[0]} alt="" />
+                        {/* {loading ? (
                             "loading"
                         ) : (
                             <>
@@ -71,7 +72,7 @@ function Post() {
                                 {images.map((image, i) => (
                                     <img key={i} src={image} width="300px" height="250px" alt="" />
                                 ))}
-                            </>)}
+                            </>)} */}
                     </div>
                 </div>
             </div>

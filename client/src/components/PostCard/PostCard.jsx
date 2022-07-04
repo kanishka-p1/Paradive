@@ -9,6 +9,7 @@ function ActivityCard() {
   );
 
   const posts = data.slice(0, 3);
+
   return (
 
     <div className="container">
