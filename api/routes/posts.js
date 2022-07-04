@@ -12,7 +12,7 @@ import { verifyAdmin, verifyUser } from "../utils/verifyToken.js"
 
 const router = express.Router();
 
-router.post("/", verifyUser, createPost);
+router.post("/", createPost);
 router.put("/:id", verifyUser, updatePost);
 router.delete("/:id", verifyUser, deletePost);
 router.get("/:id", getPost);
